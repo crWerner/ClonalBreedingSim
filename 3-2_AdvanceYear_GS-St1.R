@@ -17,7 +17,7 @@ ST3 <- selectInd(ST2, n_S3)
 ST3 <- setPheno(ST3, varE = varE_St1, reps = rep_S3, fixEff = fx_eff)
 
 # Year 3
-ST2 <- selectInd(ST1, n_S2, use = "ebv")                   
+ST2 <- selectInd(ST1, n_S2, use = "ebv") # A: GEBV; A+D: GEGV                 
 ST2 <- setPheno(ST2, varE = varE_St1, reps = rep_S2, fixEff = fx_eff)
 
 # Year 2

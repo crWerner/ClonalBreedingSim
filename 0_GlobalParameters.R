@@ -2,12 +2,15 @@
 # GENOME SIMULATION
 species <- "GENERIC"   # see "?runMacs"
 n_chr <- 10             # total number of chromosomes
-n_qtl <- 100            # number of QTL per chromosome
-n_snp <- 100            # number of SNP per chromosome (20k SNP array)
+n_qtl <- 200            # number of QTL per chromosome
+n_snp <- 200            # number of SNP per chromosome (20k SNP array)
 
 # TRAIT PARAMETERS
 init_meanG <- 10        # genetic mean in the founder population       
 init_varG <- 1          # genetic variance in the founder population
+
+dominance_degree <- 0.9      # mean dominance degree. Set to 0 for additive trait.
+dominance_degree_var <- 0.2  # variance of dominance degree
 
 # TARGET PLOT-LEVEL HERITABILITIES 
 H2_seed <- 0.1     # ... in the first seedlings
@@ -18,7 +21,7 @@ H2_St1 <- 0.3      # ... in the first clonal stage
 
 # DURATION
 brnIn <- 10     # number of "historic" (burn-in) breeding cycles
-cycles <- 4    # number of "future" breeding cycles
+cycles <- 8    # number of "future" breeding cycles
 
 
 # PARENTS AND CROSSINGS
@@ -47,13 +50,12 @@ n_S3 <- 20
 n_S4 <- 5
 
 fam_maxSeed <- ceiling(n_S1 / n_crosses)  # max. number of advanced seedlings per family. Used "FillPipeline" for balanced family representation.
+fam_maxSeed_GPCP <- 10
 
 # Effective replications of yield trials to define heritabilities based on eVarSt1.
 rep_S2 <- 2      # 2 reps in Stage 2
 rep_S3 <- 4      # 4 reps in Stage 3
 rep_S45 <- 6     # 6 reps in Stage 4 & 5
-
-
 
 
 ### FUNCTIONS

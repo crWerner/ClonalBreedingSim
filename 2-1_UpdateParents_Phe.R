@@ -21,7 +21,7 @@ if (nInd(new_parents) > n_new_parents) {
 parents <- c(parents, new_parents)
 
 
-# Fill all emtpy crossing block slots up to total number of parents with the best performing individuals from stage 2
+# Fill all empty crossing block slots up to total number of parents with the best performing individuals from stage 2
 
 if (nInd(parents) < n_parents) {
   st2_parents <- selectInd(pop = ST2, nInd = (n_parents - nInd(parents)))
